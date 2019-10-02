@@ -18,6 +18,11 @@ namespace ClassesIntro
             MessageBox.Show("Bark");
         }
 
+        public void SayName()
+        {
+            MessageBox.Show("My name is: " + Name);
+        } 
+
         public Dog() { }
 
         public Dog(string breed, int height, string name)
