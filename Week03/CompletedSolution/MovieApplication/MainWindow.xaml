@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="23" Margin="85,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="51" Margin="85,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="textBox_TextChanged"/>
         <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="85,38,0,0" VerticalAlignment="Top"/>
         <Label x:Name="genreLabel" Content="Genre" HorizontalAlignment="Left" Margin="85,120,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="23" Margin="85,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="42" Margin="85,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
         <Label x:Name="reviewScoreLabel" Content="Review Score" HorizontalAlignment="Left" Margin="85,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,0.077"/>
-        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="23" Margin="85,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="48" Margin="85,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
         <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="85,272,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click"/>
 
     </Grid>
