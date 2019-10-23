@@ -27,7 +27,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="310.184,363,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click" Grid.Column="2"/>
+        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="329,393,0,-5" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click" Grid.Column="2"/>
 
         <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="243" VerticalAlignment="Top" Width="533" Margin="15,21,0,0" Grid.Column="1" SelectionChanged="movieListView_SelectionChanged" BorderThickness="3" FontFamily="Impact" Grid.ColumnSpan="2" MouseDoubleClick="movieListView_MouseDoubleClick_1">
             <ListView.View>
@@ -38,6 +38,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <TextBox x:Name="directorLabel1" HorizontalAlignment="Left" Height="30" Margin="10,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="textBox_TextChanged" Grid.Column="1" Grid.ColumnSpan="2" RenderTransformOrigin="0.486,2.663"/>
+        <Label x:Name="titleLabel_Copy" Content="Director" HorizontalAlignment="Left" Margin="34,332,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.277,3.167"/>
+        <TextBox x:Name="leadActorLabel1" HorizontalAlignment="Left" Height="30" Margin="40,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="textBox_TextChanged" Grid.Column="2" RenderTransformOrigin="0.486,2.663"/>
+        <TextBox x:Name="lengthLabel1" HorizontalAlignment="Left" Height="30" Margin="229,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="textBox_TextChanged" Grid.Column="2" RenderTransformOrigin="0.486,2.663"/>
+        <Label x:Name="titleLabel_Copy1" Content="Length (Min)" HorizontalAlignment="Left" Margin="272,327,0,0" VerticalAlignment="Top" Grid.Column="2" RenderTransformOrigin="0.277,3.167"/>
+        <Label x:Name="titleLabel_Copy2" Content="Lead Actor" HorizontalAlignment="Left" Margin="82,337,0,0" VerticalAlignment="Top" Grid.Column="2" RenderTransformOrigin="0.277,3.167"/>
 
     </Grid>
 </Window>

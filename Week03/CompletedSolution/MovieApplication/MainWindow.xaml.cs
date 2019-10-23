@@ -39,7 +39,7 @@ namespace MovieApplication
         {
             
 
-            Movie submittedMovie = new Movie(titleTextBox.Text, genreTextBox.Text, double.Parse(reviewScoreTextBox.Text));
+            Movie submittedMovie = new Movie(titleTextBox.Text, genreTextBox.Text, double.Parse(reviewScoreTextBox.Text), directorLabel1.Text, int.Parse(lengthLabel1.Text), leadActorLabel1.Text);
 
             movieList.Add(submittedMovie);
 
@@ -52,7 +52,10 @@ namespace MovieApplication
 
             titleTextBox.Clear();
             genreTextBox.Clear();
-            reviewScoreTextBox.Clear(); 
+            reviewScoreTextBox.Clear();
+            directorLabel1.Clear();
+            leadActorLabel1.Clear();
+            lengthLabel1.Clear();
 
         }
         private void movieListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
