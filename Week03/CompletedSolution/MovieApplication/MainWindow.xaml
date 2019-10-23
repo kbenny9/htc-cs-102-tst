@@ -7,12 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="453.583" Width="619.86">
     <Grid Margin="0,0,14,15">
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="30" Margin="27,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="textBox_TextChanged"/>
-        <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="46,269,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="genreLabel" Content="Genre" HorizontalAlignment="Left" Margin="257,271,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="30" Margin="230,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
-        <Label x:Name="reviewScoreLabel" Content="Review Score" HorizontalAlignment="Left" Margin="404,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,0.077"/>
-        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="30" Margin="416,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="423*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="30" Margin="15,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="textBox_TextChanged" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="34,269,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="genreLabel" Content="Genre" HorizontalAlignment="Left" Margin="82.184,271,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="30" Margin="55.184,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.Column="2"/>
+        <Label x:Name="reviewScoreLabel" Content="Review Score" HorizontalAlignment="Left" Margin="229.184,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,0.077" Grid.Column="2"/>
+        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="30" Margin="241.184,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,13 +27,14 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="485,363,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click"/>
-        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="232" VerticalAlignment="Top" Width="533" Margin="27,32,0,0">
+        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="310.184,363,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click" Grid.Column="2"/>
+
+        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="243" VerticalAlignment="Top" Width="533" Margin="15,21,0,0" Grid.Column="1" SelectionChanged="movieListView_SelectionChanged" BorderThickness="3" FontFamily="Impact" Grid.ColumnSpan="2" MouseDoubleClick="movieListView_MouseDoubleClick_1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="200" Header="Title"  DisplayMemberBinding="{Binding Title}"></GridViewColumn>
-                    <GridViewColumn Width="130" Header="Genre" DisplayMemberBinding="{Binding Genre}"></GridViewColumn>
-                    <GridViewColumn Width="110" Header="Review Score" DisplayMemberBinding="{Binding ReviewScore}"></GridViewColumn>
+                    <GridViewColumn Width="250" Header="Title"  DisplayMemberBinding="{Binding Title}"></GridViewColumn>
+                    <GridViewColumn Width="160" Header="Genre" DisplayMemberBinding="{Binding Genre}"></GridViewColumn>
+                    <GridViewColumn Width="150" Header="Review Score" DisplayMemberBinding="{Binding ReviewScore}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

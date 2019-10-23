@@ -48,17 +48,24 @@ namespace MovieApplication
             //submittedMovie.ReviewScore = Convert.ToDouble(reviewScoreTextBox.Text);
             //submittedMovie.ReviewScore = Double.Parse(reviewScoreTextBox.Text);
 
-            submittedMovie.DisplayInformation();
+            // submittedMovie.DisplayInformation();
 
             titleTextBox.Clear();
             genreTextBox.Clear();
             reviewScoreTextBox.Clear(); 
 
         }
+        private void movieListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
 
-        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void movieListView_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
+        {
+            Movie selectedMovie = movieListView.SelectedItem as Movie;
+
+            selectedMovie.DisplayInformation();
         }
     }
 }
