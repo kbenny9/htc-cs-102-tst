@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InheritanceIntro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="700">
+        Title="MainWindow" Height="571.028" Width="776.947">
     <StackPanel>
         <Image Source="dog.jpg" Width="700"/>
         <Button Click="Bark_Button_Click">Bark</Button>
         <Button Click="SayName_Button_Click">Say Name</Button>
+        <Button x:Name="quackButton" Content="Quack" Click="quackButton_Click" />
     </StackPanel>
 </Window>

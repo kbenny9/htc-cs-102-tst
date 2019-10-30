@@ -35,7 +35,7 @@ namespace InheritanceIntro
         {
             // Define a new List of dogs
             List<Dog> dogs = new List<Dog>();
-            
+
             // Instantiate some dog objects
             Dog dog1 = new Dog("Muppet", 20, "Rolf");
             Dog dog2 = new Dog("Golden Retriever", 30, "Air Bud");
@@ -49,6 +49,19 @@ namespace InheritanceIntro
             {
                 d.SayName();
             }
+
+            //make a duck
+            //have it say its name
+            Duck duck = new Duck("Bob", 100);
+            duck.SayName();
+        }
+
+        private void quackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Make a duck
+            // make it quack
+            Duck duck = new Duck("Bobert", 50);
+            duck.Quack();
         }
     }
 }
