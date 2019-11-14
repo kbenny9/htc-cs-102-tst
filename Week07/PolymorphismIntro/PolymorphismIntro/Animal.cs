@@ -11,15 +11,23 @@ namespace PolymorphismIntro
     {
         public int Height { get; set; }
         public string Name { get; set; }
+        public int Weight { get; set; }
+        public string Type { get; set; }
+
 
         public void SayName()
         {
             MessageBox.Show("My name is " + Name);
         }
 
+        public void Info()
+        {
+            MessageBox.Show($"Name: {Name} \n Type: {Type} \n Height: {Height} \n Weight: {Weight}");
+        }
+
         public virtual void Speak()
         {
-
+            
         }
     }
 }

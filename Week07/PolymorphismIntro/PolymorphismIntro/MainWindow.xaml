@@ -8,11 +8,14 @@
         Title="MainWindow" Height="650" Width="300">
     <StackPanel>
         <Button Click="SayName_Button_Click">Say Name</Button>
+        <Button Click="Info_Button_Click">Explain My Life Story</Button>
         <ListView x:Name="lvAnimals" Height="215">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Width="90" Header="Height" DisplayMemberBinding="{Binding Height}"/>
+                    <GridViewColumn Width="70" Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="70" Header="Height" DisplayMemberBinding="{Binding Height}"/>
+                    <GridViewColumn Width="70" Header="Weight" DisplayMemberBinding="{Binding Weight}"/>
+                    <GridViewColumn Width="70" Header="Type" DisplayMemberBinding="{Binding Type}"/>
                 </GridView>
             </ListView.View>
         </ListView>

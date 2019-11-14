@@ -11,6 +11,8 @@ namespace InterfacesIntro
     {
         public int Height { get; set; }
         public string Name { get; set; }
+        public int Weight { get; set; }
+        public string Type { get; set; }
 
         public void SayName()
         {

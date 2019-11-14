@@ -30,13 +30,15 @@ namespace PolymorphismIntro
 
             // make some animals
 
-            Frog frog = new Frog(4, "Frog", true);
-            Dog dog = new Dog("Labradoodle", 35, "Dog");
-            Duck duck = new Duck(4, "Duck");
+            Frog frog = new Frog(4, "Frug", true, 4000);
+            Dog dog = new Dog("Labradoodle", 35, "dug", 8300000);
+            Duck duck = new Duck(4, "poop", 3);
+            Animal bruh = new Duck(500, "u suck", 40);
 
             Animals.Add(frog);
             Animals.Add(dog);
             Animals.Add(duck);
+            Animals.Add(bruh);
 
             lvAnimals.ItemsSource = Animals;
         }
@@ -46,6 +48,14 @@ namespace PolymorphismIntro
             foreach (Animal a in Animals)
             {
                 a.SayName();
+            }
+        }
+
+        private void Info_Button_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Animal a in Animals)
+            {
+                a.Info();
             }
         }
     }
