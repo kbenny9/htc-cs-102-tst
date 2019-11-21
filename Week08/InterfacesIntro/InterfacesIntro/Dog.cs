@@ -10,6 +10,11 @@ namespace InterfacesIntro
     public class Dog : Animal
     {
         public string Breed;
+        private string v1;
+        private int v2;
+        private string v3;
+        private int v4;
+        private int v5;
 
         public override void Speak()
         {
@@ -18,15 +23,19 @@ namespace InterfacesIntro
 
         public Dog() { }
 
-        public Dog(string breed, int height, string name, int weight)
+        public Dog(string breed, int height, string name, int weight, int numLegs, double strideLength)
+
         {
             this.Breed = breed;
             this.Height = height;
             this.Name = name;
             this.Weight = weight;
             this.Type = "Dog";
+            this.NumLegs = numLegs;
+            this.StrideLength = strideLength;
 
         }
 
+   
     }
 }
